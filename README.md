@@ -2,7 +2,7 @@
 
 ## SAS 360 API CORE LIBRARY
 
-> **Status: canonical.** This is the shared authentication/transport library every other client in the family depends on.
+> **Status: superseded.** This library has been replaced by [`packages/api-core`](https://github.com/mnelson3/sas-ci360-sdk/tree/main/packages/api-core) in the [`sas-ci360-sdk`](https://github.com/mnelson3/sas-ci360-sdk) monorepo — the same shared authentication/transport layer, now consolidated with the other CI360 API clients. This repo is kept for historical reference; start new work in `sas-ci360-sdk` instead.
 
 ### Overview
 

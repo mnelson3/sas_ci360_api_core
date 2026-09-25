@@ -1,21 +1,30 @@
 # Security Policy
 
-## Overview
-
-Foundational Python library for building solutions against the SAS Customer Intelligence 360 REST API collection.
-
 ## Supported Versions
 
-Only the latest commit on the default branch is supported with security fixes. There are no maintained release branches at this time.
+This repository holds the archived, superseded core Python library (authentication/transport) for SAS Customer Intelligence 360 REST APIs, retained as a historical/reference repo — the maintained implementation now lives in [`sas-ci360-sdk`](https://github.com/mnelson3/sas-ci360-sdk). Only the code currently deployed on each environment branch is supported — there is no long-term support for older commits.
+
+| Branch | Environment | Status |
+|---|---|---|
+| `main` | Production | Supported |
+| `staging` | Staging | Supported |
+| `develop` | Development | Supported |
 
 ## Reporting a Vulnerability
 
-Please do not report security vulnerabilities by opening a public issue on GitLab.
+This repository doesn't have a public issue tracker, so please don't report security concerns that way. Use one of:
 
-Instead, email **support@nelsongrey.com** with:
+- GitHub's [private vulnerability reporting](https://github.com/mnelson3/sas_ci360_api_core-archived/security/advisories/new) (enabled on this repo), or
+- Email **support@nelsongrey.com**
+
+Either way, include:
 
 - A description of the vulnerability and its potential impact
 - Steps to reproduce, or a proof of concept if available
-- Any relevant logs or affected code paths
+- Any relevant logs, request/response samples, or affected endpoints
 
-You should get an acknowledgement within a few business days, and we'll keep you updated as the issue is investigated and resolved.
+You should get an acknowledgement within a few business days.
+
+## Automated Dependency Scanning
+
+Dependabot alerts and security updates, native GitHub secret scanning (with push protection), and code scanning (CodeQL) are all enabled on this repository. Avoid committing credentials or secrets regardless — this library takes API credentials at runtime via caller-supplied configuration, never committed to source.
